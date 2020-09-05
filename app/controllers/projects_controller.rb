@@ -1,0 +1,20 @@
+class ProjectsController < ApplicationController
+  def new
+    @project = Project.new
+  end
+
+  def create
+    project = Project.new(project_params)
+    project[:user_id] = current_user.id
+
+    redirect_to root_path if project.save
+  end
+
+  def update; end
+
+  private
+
+  def project_params
+    params.require(:project).permit(:title, :project_image)
+  end
+end

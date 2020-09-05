@@ -22,14 +22,22 @@
     </header>
 </div>
 <div class="my-portfolio">
-    <div class="project">
-        <div class="project-name">
+    <% @projects.each do |p| %>
+        <div class="project">
+            <div class="project-name">
+                <%= p.title %>
+            </div>
+            <div class="tags">
+                <% p.tags.each do |t| %>
+                    <%= t.name %>
+                <% end %>
+            </div>
+            <div class="button">
+                <a href="<%= p.live_link %>"></a>
+                <a href="<%= p.source_link %>"></a>
+            </div>
         </div>
-        <div class="tags">
-        </div>
-        <div class="button">
-        </div>
-    </div>
+    <% end %>
 </div>
 <div class="about-me">
     <div class="intro">

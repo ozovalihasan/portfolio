@@ -1,0 +1,9 @@
+<%= form_with model: @project, class: "nifty_form" do |f| %>
+    <%= f.text_field :title %>
+    <%= f.file_field :project_image %>
+    <%= label_tag(:source_link, "Source Link") %>
+    <%= f.text_field :source_link %>
+    <%= label_tag(:live_link, "Live Link") %>
+    <%= f.text_field :live_link %>
+    <%= f.submit "Create" %>
+<% end %>
