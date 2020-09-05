@@ -25,6 +25,9 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise', '~> 4.7', '>= 4.7.2'
 # Add pry
 gem 'pry', '~> 0.13.1'
+# Add bootstrap
+gem 'bootstrap', '~> 4.5', '>= 4.5.2'
+gem 'jquery-rails', '~> 4.4'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
