@@ -23,6 +23,7 @@ gem 'jbuilder', '~> 2.7'
 
 # Add devise
 gem 'devise', '~> 4.7', '>= 4.7.2'
+# Add pry
 gem 'pry', '~> 0.13.1'
 
 # Use Active Storage variant

@@ -23,6 +23,9 @@
 </div>
 <div class="my-portfolio">
     <% @projects.each do |p| %>
+        <% if p.project_image.attached?  %>
+            <%= image_tag p.project_image %>
+        <% end %>
         <div class="project">
             <div class="project-name">
                 <%= p.title %>

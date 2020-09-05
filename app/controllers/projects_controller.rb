@@ -10,11 +10,20 @@ class ProjectsController < ApplicationController
     redirect_to root_path if project.save
   end
 
-  def update; end
+  def edit
+    @project = Project.find(params[:id])
+  end
+
+  def update
+    project = Project.find(params[:id])
+    require 'pry'
+    binding.pry
+    redirect_to root_path if project.update(project_params)
+  end
 
   private
 
   def project_params
-    params.require(:project).permit(:title, :project_image)
+    params.require(:project).permit(:title, :project_image, :source_link, :live_link)
   end
 end
