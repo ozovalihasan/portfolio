@@ -13,6 +13,15 @@
         <%= f.label :email %><br />
         <%= f.email_field :email, autofocus: true, autocomplete: "email", required: true %>
     </div>
+    <div class="">
+        <div class=" ">
+            <div class="">Profile Picture</div>
+            <label for="profile-picture" class="">
+                <span class="custom_button">Choose</span>
+            </label>
+            <input id="profile-picture" type="file"/>
+        </div>
+    </div>
     <div class="field">
         <%= f.label :password %>
         <% if @minimum_password_length %>
