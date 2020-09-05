@@ -24,8 +24,6 @@ $colors: (
   second-color: $second-color,
   third-color: $third-color,
   fourth-color: $fourth-color,
-  fifth-color: $fifth-color,
-  sixth-color: $sixth-color,
 );
 
 @each $name, $color in $colors {
