@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+
+$first-color: #ff9102;
+$second-color: #2402ff;
+$third-color: darken($second-color, 30%);
+$fourth-color: lighten($second-color, 30%);
+
+$colors: (
+  first-color: $first-color,
+  second-color: $second-color,
+  third-color: $third-color,
+  fourth-color: $fourth-color,
+  fifth-color: $fifth-color,
+  sixth-color: $sixth-color,
+);
+
+@each $name, $color in $colors {
+  .bg-#{$name} {
+    background-color: $color;
+  }
+  .text-#{$name} {
+    color: $color;
+  }
+}
