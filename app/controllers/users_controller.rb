@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def show
-    @projects = current_user.projects
+    @projects = User.first.projects
   end
 
   def home

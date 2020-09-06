@@ -20,7 +20,7 @@
 $first-color: #ff9102;
 $second-color: #2402ff;
 $third-color: darken($second-color, 30%);
-$fourth-color: lighten($second-color, 30%);
+$fourth-color: lighten($second-color, 10%);
 
 $colors: (
   first-color: $first-color,
@@ -35,5 +35,79 @@ $colors: (
   }
   .text-#{$name} {
     color: $color;
+  }
+}
+
+body {
+  color: $third-color;
+  max-width: 100%;
+
+  a {
+    color: unset;
+
+    &:hover {
+      color: $fourth-color;
+      text-decoration-line: none;
+    }
+  }
+}
+
+header {
+  background-image: url("https://loremflickr.com/cache/resized/65535_49878140401_7c7fd893d0_h_500_500_nofilter.jpg");
+  background-size: cover;
+}
+
+.custom-button {
+  @extend .rounded-pill;
+}
+
+.project-name {
+  top: 0px;
+}
+
+.one-project {
+  font-size: 6vw;
+}
+
+.tags,
+.buttons {
+  display: flex;
+}
+@media only screen and (min-width: 768px) {
+  .one-project {
+    font-size: inherit;
+  }
+
+  .tags,
+  .project,
+  .buttons {
+    position: absolute;
+  }
+
+  .tags {
+    top: 10%;
+  }
+  .buttons {
+    top: auto;
+    bottom: 10%;
+  }
+  .tags,
+  .buttons {
+    display: none;
+  }
+
+  .opac-layer {
+    background-image: linear-gradient(#000000cc, transparent);
+    opacity: 0.5;
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+  }
+
+  .inside-project:hover .tags,
+  .inside-project:hover .buttons {
+    display: flex;
   }
 }

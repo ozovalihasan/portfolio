@@ -16,8 +16,6 @@ class ProjectsController < ApplicationController
 
   def update
     project = Project.find(params[:id])
-    require 'pry'
-    binding.pry
     redirect_to root_path if project.update(project_params)
   end
 

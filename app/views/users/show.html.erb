@@ -1,12 +1,12 @@
-<div class="container">
+<div class="">
     <header>
         <nav>
             <div class="logo">
             </div>
-            <ul>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+            <ul class="d-flex flex-md-column flex-row">
+                <li><a href="#" class="">Portfolio</a></li>
+                <li><a href="#" class="">About</a></li>
+                <li><a href="#" class="">Contact</a></li>
             </ul>
         </nav>
         <div>
@@ -21,43 +21,99 @@
         <div class="links"></div>
     </header>
 </div>
-<div class="my-portfolio">
-    <% @projects.each do |p| %>
-        <% if p.project_image.attached?  %>
-            <%= image_tag p.project_image %>
+<div class="mx-3">
+    <div class="my-portfolio row">
+        <% @projects.each do |p| %>
+            <div class="one-project  col-lg-4  col-md-6 col-12 p-3  ">
+                <div class="inside-project position-relative h-100">
+                    <%= image_tag  p.project_image, class: 'project-image  w-100 h-auto d-block'  %>
+                    <div class="opac-layer"></div>
+                    <div class="project-name text-first-color p-3 position-absolute ">
+                        <%= p.title %>
+                    </div>
+                    <div class="tags text-first-color  w-100  ">
+                        <% p.tags.each do |t| %>
+                            <div class="custom-button bg-first-color text-second-color w-100 text-center m-2">
+                                <%= t.name %>
+                            </div>
+                        <% end %>
+                    </div>
+                    <div class="buttons w-100  py-2">
+                        <a href="<%= p.live_link %>" class="bg-first-color custom-button w-100 text-center mx-2">live link</a>
+                        <a href="<%= p.source_link %>" class="bg-first-color custom-button w-100 text-center mx-2">source link</a>
+                    </div>
+                </div>
+            </div>
         <% end %>
-        <div class="project">
-            <div class="project-name">
-                <%= p.title %>
-            </div>
-            <div class="tags">
-                <% p.tags.each do |t| %>
-                    <%= t.name %>
-                <% end %>
-            </div>
-            <div class="button">
-                <a href="<%= p.live_link %>"></a>
-                <a href="<%= p.source_link %>"></a>
-            </div>
-        </div>
-    <% end %>
-</div>
-<div class="about-me">
-    <div class="intro">
     </div>
-    <div class="known">
-        <div class="languages">
+    <div class="about-me">
+        <div class="intro">
+            <h2>About me</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in rhoncus nulla, eget volutpat justo. Phasellus semper feugiat mi a hendrerit. Aliquam nec molestie neque. Maecenas pretium tortor et ligula mollis, ac tempus odio iaculis. Sed ac mauris eget orci dictum vulputate. Ut id pellentesque libero, interdum tincidunt risus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus malesuada lorem nunc, ac auctor diam cursus convallis. Proin molestie non dolor sit amet vehicula. Nam odio velit, lacinia eget ligula quis, volutpat cursus sapien.</p>
         </div>
-        <div class="frameworks">
-        </div>
-        <div class="skills">
+        <div class="known">
+            <div class="languages">
+                <ul>
+                    <li>
+                        javascript
+                    </li>
+                    <li>
+                        ruby
+                    </li>
+                    <li>
+                        html
+                    </li>
+                    <li>
+                        css
+                    </li>
+                </ul>
+            </div>
+            <div class="frameworks">
+                <ul>
+                    <li>
+                        bootstrap
+                    </li>
+                    <li>
+                        ruby on rails
+                    </li>
+                    <li>
+                        RSpec
+                    </li>
+                    <li>
+                        Capybara
+                    </li>
+                    <li>
+                        selenium
+                    </li>
+                </ul>
+            </div>
+            <div class="skills">
+                <ul>
+                    <li>
+                        bootstrap
+                    </li>
+                    <li>
+                        ruby on rails
+                    </li>
+                    <li>
+                        RSpec
+                    </li>
+                    <li>
+                        Capybara
+                    </li>
+                    <li>
+                        selenium
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
-<div class="contact">
-    <div class="intro">
-    </div>
-    <div class="contact-+form">
+    <div class="contact">
+        <div class="intro">
+            <h2>interesting to contact me</h2>
+        </div>
+        <div class="contact-+form">
+        </div>
     </div>
 </div>
 <footer>
