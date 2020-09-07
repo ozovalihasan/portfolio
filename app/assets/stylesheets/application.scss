@@ -52,9 +52,33 @@ body {
   }
 }
 
+.outer {
+  position: relative;
+}
+nav {
+  position: absolute;
+}
+.logo {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+}
+main {
+  margin-top: 100px;
+}
+
 header {
-  background-image: url("https://loremflickr.com/cache/resized/65535_49878140401_7c7fd893d0_h_500_500_nofilter.jpg");
+  // background-image: url("https://loremflickr.com/cache/resized/65535_49878140401_7c7fd893d0_h_500_500_nofilter.jpg");
   background-size: cover;
+}
+
+.header-intro {
+  bottom: 0px;
+}
+
+.header-image {
+  width: 400px;
+  height: 400px;
 }
 
 .custom-button {
@@ -73,7 +97,39 @@ header {
 .buttons {
   display: flex;
 }
+
+.opac-layer {
+  background-image: linear-gradient(#000000cc, transparent);
+  opacity: 0.5;
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.project-image,
+.opac-layer {
+  border-radius: 10%;
+}
+
+.inside-project {
+}
+
 @media only screen and (min-width: 768px) {
+  .outer {
+    position: static;
+  }
+  nav {
+    width: 15%;
+    position: static;
+  }
+
+  .header-intro {
+  }
+  main {
+    width: 85%;
+  }
   .one-project {
     font-size: inherit;
   }
@@ -94,16 +150,6 @@ header {
   .tags,
   .buttons {
     display: none;
-  }
-
-  .opac-layer {
-    background-image: linear-gradient(#000000cc, transparent);
-    opacity: 0.5;
-    display: block;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
   }
 
   .inside-project:hover .tags,
