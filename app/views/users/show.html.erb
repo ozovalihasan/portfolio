@@ -1,33 +1,43 @@
 <div class="outer d-flex flex-column flex-md-row w-100">
-    <nav class="d-flex flex-md-column flex-row column-md-2 w-100  my-3">
-        <ul class="d-flex flex-md-column flex-row text-center w-100">
-            <li  class="custom-button bg-first-color px-3 mx-auto my-3"><a href="#">Portfolio</a></li>
-            <li  class="custom-button bg-first-color px-3 mx-auto my-3"><a href="#">About</a></li>
-            <li  class="custom-button bg-first-color px-3 mx-auto my-3"><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+    <div class="nav-container">
+        <nav class="fixed-top d-flex flex-md-column flex-row column-md-2 mb-3 p-0 pt-3 "  >
+            <ul class="d-flex flex-md-column flex-row text-center w-100">
+                <li class="custom-button bg-first-color px-3 mx-2 my-3 flex-grow-1">
+                    <a href="#">Intro</a>
+                </li>
+                <li class="custom-button bg-first-color px-3 mx-2 my-3 flex-grow-1">
+                    <a href="#">Portfolio</a>
+                </li>
+                <li class="custom-button bg-first-color px-3 mx-2 my-3 flex-grow-1">
+                    <a href="#">About</a>
+                </li>
+                <li class="custom-button bg-first-color px-3 mx-2 my-3 flex-grow-1">
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
     <main>
         <header>
-            <div class="position-relative d-md-flex">
-                <div class=" header-intro text-first-color w-100 text-center">
-                    <h1 >Hasan Özovalı</h1>
-                    <h3 >Full-stack Web Developer</h3>
-                    <p >Hello I am workings as software developer</p>
+            <div class="position-relative d-flex flex-column flex-md-row">
+                <div class="header-intro text-first-color text-center d-flex flex-column ">
+                    <h1 class="mt-auto ">Hasan Özovalı</h1>
+                    <h3>Full-stack Web Developer</h3>
+                    <p class="mb-auto">Hello I am workings as software developer</p>
                 </div>
-                <div class="header-image mr-md-5 ml-md-auto w-auto h-auto">
+                <div class="header-image">
                     <%= render 'users/header',size: "50x20" %>
                 </div>
             </div>
             <div class="links">links</div>
         </header>
         <h2 class="ml-4">My Portfolio</h2>
-        <div class="my-portfolio row">
+        <div class="my-portfolio row mx-0">
             <% @projects.each do |p| %>
                 <div class="one-project col-lg-4 col-md-6 col-12 p-3">
                     <div class="inside-project position-relative pb-5">
                         <div class="position-relative">
-                            <%= image_tag p.project_image, class: 'project-image w-100 h-auto
-            d-block' %>
+                            <%= image_tag p.project_image, class: 'project-image w-100 h-auto d-block' %>
                             <div class="opac-layer"></div>
                         </div>
                         <div class="project-name text-first-color p-5 position-absolute">
@@ -35,9 +45,7 @@
                         </div>
                         <div class="tags text-first-color w-100 pt-4">
                             <% p.tags.each do |t| %>
-                                <div
-              class="custom-button bg-first-color text-second-color w-100 text-center m-2"
-            >
+                                <div class="custom-button bg-first-color text-second-color w-100 text-center m-2">
                                     <%= t.name %>
                                 </div>
                             <% end %>
