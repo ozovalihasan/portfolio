@@ -28,6 +28,8 @@ gem 'pry', '~> 0.13.1'
 # Add bootstrap
 gem 'bootstrap', '~> 4.5', '>= 4.5.2'
 gem 'jquery-rails', '~> 4.4'
+# Add fontawesome
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

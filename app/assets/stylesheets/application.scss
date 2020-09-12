@@ -16,7 +16,7 @@
  */
 
 @import "bootstrap/scss/bootstrap";
-
+@import "font-awesome";
 $first-color: #ff9102;
 $second-color: #2402ff;
 $third-color: darken($second-color, 30%);
@@ -99,6 +99,10 @@ header {
 }
 
 .header-image {
+}
+
+.links {
+  font-size: 2em;
 }
 
 .custom-button {
