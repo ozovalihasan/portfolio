@@ -38,6 +38,23 @@ $colors: (
   }
 }
 
+html {
+  overflow-y: scroll;
+}
+
+* {
+  scrollbar-color: $first-color $second-color;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: $fourth-color;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $third-color;
+}
+
 body {
   color: $third-color;
   max-width: 100%;
