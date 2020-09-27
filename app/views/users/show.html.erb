@@ -1,6 +1,6 @@
 <div class="outer d-flex flex-column flex-md-row w-100">
     <div class="nav-container">
-        <nav class="fixed-top d-flex flex-md-column flex-row column-md-2 mb-3 p-0 pt-3 "  >
+        <nav class="fixed-top d-flex flex-md-column flex-row column-md-2  p-0 pt-3 "  >
             <ul class="d-flex flex-md-column flex-row text-center w-100">
                 <li class="custom-button bg-first-color px-3 mx-2 my-3 flex-grow-1">
                     <a href="#">Intro</a>
@@ -18,18 +18,18 @@
         </nav>
     </div>
     <main>
-        <header>
-            <div class="position-relative d-flex flex-column flex-md-row">
-                <div class="header-intro text-first-color text-center d-flex flex-column ">
+        <header >
+            <div class="position-relative bg-first-color d-flex flex-column flex-md-row padding-body pt-3">
+                <div class="header-intro  text-white text-center d-flex flex-column ">
                     <h1 class="mt-auto ">Hasan Özovalı</h1>
                     <h3>Full-stack Web Developer</h3>
                     <p class="mb-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non orci quis augue varius hendrerit id vitae lectus. Vestibulum viverra sed magna ut ornare. Phasellus mollis dolor vel orci maximus, ut molestie leo placerat. Mauris sollicitudin nunc non mauris aliquet, sed commodo odio gravida. </p>
-                </div>
-                <div class="links rounded bg-white rounded-pill text-center px-auto">
-                    <%= fa_icon "github"%>
-                    <%= fa_icon "linkedin-square"%>
-                    <%= fa_icon "angellist"%>
-                    <%= fa_icon "twitter"%>
+                    <div class="links rounded bg-white rounded-pill text-second-color text-center px-auto mt-3">
+                        <%= fa_icon "github"%>
+                        <%= fa_icon "linkedin-square"%>
+                        <%= fa_icon "angellist"%>
+                        <%= fa_icon "twitter"%>
+                    </div>
                 </div>
                 <div class="header-image">
                     <%= render 'users/header',size: "50x20" %>

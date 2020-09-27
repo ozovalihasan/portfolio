@@ -43,7 +43,7 @@ html {
 }
 
 * {
-  scrollbar-color: $first-color $second-color;
+  scrollbar-color: $second-color $first-color;
 }
 
 ::-webkit-scrollbar {
@@ -58,8 +58,6 @@ html {
 body {
   color: $third-color;
   max-width: 100%;
-  margin-left: 20px;
-  margin-right: 20px;
 
   a {
     color: white;
@@ -69,6 +67,11 @@ body {
       text-decoration-line: none;
     }
   }
+}
+
+.padding-body {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .outer {
@@ -86,7 +89,7 @@ nav {
   background-color: red;
 }
 main {
-  margin-top: 100px;
+  margin-top: 88px;
 }
 
 header {
